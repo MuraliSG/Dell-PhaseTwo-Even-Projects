@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplicationFundamentals", "WebApplicationFundamentals\WebApplicationFundamentals.csproj", "{06D2A5A9-53D7-48A4-B892-A51291EF5E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringMVCApplications", "ConfiguringMVCApplications\ConfiguringMVCApplications.csproj", "{B487D05D-B3FA-41F8-9F4C-46E4A6A9578C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguringMVCApplications", "ConfiguringMVCApplications\ConfiguringMVCApplications.csproj", "{B487D05D-B3FA-41F8-9F4C-46E4A6A9578C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataPassingTechniquesApplication", "DataPassingTechniquesApplication\DataPassingTechniquesApplication.csproj", "{3B2F62C1-D86B-4087-872E-5AC9DEBD0C2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreMVCRepositoryDependencyInjectionApplication", "CoreMVCRepositoryDependencyInjectionApplication\CoreMVCRepositoryDependencyInjectionApplication.csproj", "{BCE55FC9-2FF3-44B0-B3B4-53CDFE677503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{B487D05D-B3FA-41F8-9F4C-46E4A6A9578C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B487D05D-B3FA-41F8-9F4C-46E4A6A9578C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B487D05D-B3FA-41F8-9F4C-46E4A6A9578C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2F62C1-D86B-4087-872E-5AC9DEBD0C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2F62C1-D86B-4087-872E-5AC9DEBD0C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2F62C1-D86B-4087-872E-5AC9DEBD0C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2F62C1-D86B-4087-872E-5AC9DEBD0C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE55FC9-2FF3-44B0-B3B4-53CDFE677503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE55FC9-2FF3-44B0-B3B4-53CDFE677503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE55FC9-2FF3-44B0-B3B4-53CDFE677503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE55FC9-2FF3-44B0-B3B4-53CDFE677503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

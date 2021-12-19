@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Info";
+}
+
+
+<h2>@TempData["Message"]</h2>
+<h3>There are @TempData["StudentCount"] students are there in this list.</h3>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in TempData["StudentList"] as IList<Student>)
+        {
+            <tr>
+                <td>@item.StudentID</td>
+                <td>@item.Name</td>
+                <td>@item.Gender</td>
+                <td>@item.City</td>
+            </tr>
+        }
+    </tbody>
+</table>

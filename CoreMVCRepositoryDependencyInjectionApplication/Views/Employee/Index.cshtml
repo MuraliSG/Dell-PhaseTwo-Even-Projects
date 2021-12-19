@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CoreMVCRepositoryDependencyInjectionApplication.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<a asp-controller="Employee" asp-action="Create" class="btn btn-secondary">Create New Empoyee</a>
+
+<br />
+<h3>Employee List</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Designation</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+            {
+        <tr>
+            <td>@item.EmployeeId</td>
+            <td>@item.Name</td>
+            <td>@item.Gender</td>
+            <td>@item.Designation</td>
+            <td>
+                <a asp-controller="Employee" asp-action="Details" asp-route-id="@item.EmployeeId">Details</a>
+            </td>
+
+        </tr>
+            }
+    </tbody>
+</table>
