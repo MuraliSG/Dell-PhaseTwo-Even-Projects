@@ -20,12 +20,17 @@ namespace WebApplicationFundamentals
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // this method helps in adding the middlewares, dependencies, configurations and so on...
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            // AddRazorpages is a middleware
+            //services.AddRazorPages();
+            // adding a middleware for configuring MVC
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // this method helps in uses already added middlewares in request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -37,15 +42,27 @@ namespace WebApplicationFundamentals
                 app.UseExceptionHandler("/Error");
             }
 
+            //DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+            //defaultFilesOptions.DefaultFileNames.Clear();
+            //defaultFilesOptions.DefaultFileNames.Add("Dashboard.html");
+            //defaultFilesOptions.DefaultFileNames.Add("Home.html");
+            ////UseDefaultFiles is one of the middle ware
+            //app.UseDefaultFiles(defaultFilesOptions);
+            //app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
+            // use MVC middleware /end point for configuring routes 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute
+                (
+                    name: "Default", 
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                 );
             });
         }
     }

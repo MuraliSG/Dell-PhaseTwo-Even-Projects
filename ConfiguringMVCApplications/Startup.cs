@@ -22,7 +22,8 @@ namespace ConfiguringMVCApplications
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            // adding a middleware for configuring MVC
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,9 +44,14 @@ namespace ConfiguringMVCApplications
 
             app.UseAuthorization();
 
+            // use MVC middleware /end point for configuring routes 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute
+                (
+                    name: "Default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                 );
             });
         }
     }
